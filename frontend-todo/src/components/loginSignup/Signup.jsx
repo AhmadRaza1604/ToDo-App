@@ -1,6 +1,8 @@
 import './Signup.css'; // Import the global CSS styles
 import React, { useState } from 'react';
-import { FaEye, FaEyeSlash } from 'react-icons/fa'; // Importing eye icons
+import { FaEye, FaEyeSlash, FaLock, FaUser,FaUserEdit} from 'react-icons/fa'; // Importing eye icons
+import { TbLock, TbUserEdit } from 'react-icons/tb'; // Importing eye icons
+import { MdEmail } from 'react-icons/md'; // Importing eye icons
 import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -104,7 +106,8 @@ const Signup = () => {
           <ToastContainer /> {/* Toast container to display toasts */}
           <h1 id="signup-title">Sign Up</h1>
           <form id="signup-form" onSubmit={handleSubmit(onSubmit)}>
-            <div>
+          <div className='relative'>
+              <TbUserEdit className={`input-icon ${errors.fname ? 'top-1/3' : 'top-1/2'} `} /> {/* Username Icon */}
               <input
                 type="text"
                 id="signup-fname"
@@ -114,7 +117,8 @@ const Signup = () => {
               />
               {errors.fname && <p className="text-red-500 text-sm mt-1 ml-2">{errors.fname.message}</p>}
             </div>
-            <div>
+            <div className='relative'>
+              <FaUserEdit className={`input-icon ${errors.lname ? 'top-1/3' : 'top-1/2'} `} /> {/* Username Icon */}
               <input
                 type="text"
                 id="signup-lname"
@@ -124,7 +128,8 @@ const Signup = () => {
               />
               {errors.lname && <p className="text-red-500 text-sm mt-1 ml-2">{errors.lname.message}</p>}
             </div>
-            <div>
+            <div className='relative'>
+              <FaUser className={`input-icon ${errors.username ? 'top-1/3' : 'top-1/2'} `} /> {/* Username Icon */}
               <input
                 type="text"
                 id="signup-username"
@@ -134,7 +139,8 @@ const Signup = () => {
               />
               {errors.username && <p className="text-red-500 text-sm mt-1 ml-2">{errors.username.message}</p>}
             </div>
-            <div>
+            <div className='relative'>
+              <MdEmail className={`input-icon ${errors.email ? 'top-1/3' : 'top-1/2'} `} /> {/* Username Icon */}
               <input
                 type="email"
                 id="signup-email"
@@ -144,7 +150,8 @@ const Signup = () => {
               />
               {errors.email && <p className="text-red-500 text-sm mt-1 ml-2">{errors.email.message}</p>}
             </div>
-            <div className="relative">
+            <div className='relative'>
+              <FaLock className={`input-icon ${errors.password ? 'top-1/3' : 'top-1/2'} `} /> {/* Username Icon */}
               <input
                 type={passwordVisible ? 'text' : 'password'}
                 id="signup-password"
@@ -152,12 +159,14 @@ const Signup = () => {
                 {...register('password')}
                 className={`form-input ${errors.password ? 'border-red-500' : ''}`}
               />
+              {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
               <span id="password-toggle" onClick={togglePasswordVisibility}>
                 {passwordVisible ? <FaEyeSlash /> : <FaEye />}
               </span>
               {errors.password && <p className="text-red-500 text-sm mt-1 ml-2">{errors.password.message}</p>}
             </div>
-            <div className="relative">
+            <div className='relative'>
+              <TbLock className={`input-icon ${errors.confirmPassword ? 'top-1/3' : 'top-1/2'} `} /> {/* Username Icon */}
               <input
                 type={confirmPasswordVisible ? 'text' : 'password'}
                 id="signup-confirm-password"
@@ -165,6 +174,7 @@ const Signup = () => {
                 {...register('confirmPassword')}
                 className={`form-input ${errors.confirmPassword ? 'border-red-500' : ''}`}
               />
+              {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
               <span id="confirm-password-toggle" onClick={toggleConfirmPasswordVisibility}>
                 {confirmPasswordVisible ? <FaEyeSlash /> : <FaEye />}
               </span>

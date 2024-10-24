@@ -70,7 +70,7 @@ const Login = () => {
                     <h1 id="login-title">Sign In</h1>
                     <form id="login-form" onSubmit={handleSubmit(onSubmit)}>
                         <div className="relative">
-                            <FaUser className="input-icon" /> {/* Username Icon */}
+                            <FaUser className={`input-icon ${errors.username ? 'top-1/3': 'top-1/2'} `} /> {/* Username Icon */}
                             <input
                                 type="text"
                                 id="login-username"
@@ -81,7 +81,7 @@ const Login = () => {
                             {errors.username && <p className="text-red-500 text-sm mt-1 ml-2">{errors.username.message}</p>}
                         </div>
                         <div className="relative">
-                            <FaLock className={`input-icon ${errors}`} /> {/* Password Icon */}
+                            <FaLock className={`input-icon ${errors.password ? 'top-1/3': 'top-1/2'} `} /> {/* Password Icon */}
                             <input
                                 type={passwordVisible ? 'text' : 'password'}
                                 id="login-password"
@@ -89,7 +89,8 @@ const Login = () => {
                                 {...register('password')}
                                 className={`form-input pl-10 ${errors.password ? 'border-red-500' : ''}`} // Adjust padding for icon
                             />
-                            <span id="password-toggle" onClick={togglePasswordVisibility}>
+                            {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
+                                <span id="password-toggle" onClick={togglePasswordVisibility}>
                                 {passwordVisible ? <FaEyeSlash /> : <FaEye />}
                             </span>
                             {errors.password && <p className="text-red-500 text-sm mt-1 ml-2">{errors.password.message}</p>}
