@@ -1,6 +1,6 @@
 /* sidebar.css   */
   @media (max-width: 1024px) {    
-    #searchbar{
+    #date{
       display: none;
     }
   

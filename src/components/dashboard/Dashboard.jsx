@@ -87,8 +87,8 @@ const Dashboard = () => {
 
       <h1 className='text-center font-semibold font-sans text-teal-700 text-3xl'>Welcome Back, {username}</h1>
       <div id='dash-res' className=" w-full border-gray rounded-sm mt-4 border h-full flex justify-between">
-        <div  id='dash-res1' className='w-3/6 border-gray-100 rounded-xl shadow-lg m-4 border h-full'>
-          <div className='flex justify-between m-2'>
+        <div  id='dash-res1' className='w-3/6 border-gray-100 rounded-xl shadow-lg justify-self-center border h-full my-4'>
+          <div className='flex justify-between m-2 '>
             <p className='text-teal-600 font-semibold flex items-center px-1 space-x-1'><PiNotepad /><span>To-Do</span></p>
             <button
               onClick={() => setShowAddTask(true)}
@@ -121,7 +121,7 @@ const Dashboard = () => {
             </div>
           ))}
         </div>
-        <div id='dash-res1' className='w-3/6 m-4'>
+        <div id='dash-res1' className='w-3/6 my-4 justify-self-center'>
           <div className='w-full border-gray-100 rounded-xl shadow-lg border h-fit'>
             <div className='m-2'>
               <p className='text-teal-600 font-semibold flex items-center px-1 space-x-1'><BiNotepad /><span>Task Status</span></p>

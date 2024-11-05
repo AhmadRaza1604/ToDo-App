@@ -57,7 +57,7 @@ const Navbar = ({ toggler }) => {
         </button>
       </div>
 
-      <div className="flex items-center space-x-6" id="bell">
+      <div className="flex items-center space-x-6" id="date">
         <div className="text-teal-700" id="date">
           {currentTime.toDateString()}
         </div>
