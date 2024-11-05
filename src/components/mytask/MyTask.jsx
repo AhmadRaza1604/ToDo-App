@@ -37,7 +37,7 @@ const MyTask = () => {
 
     return (
         <div id='dash-res' className=" w-full border-gray-50 rounded-sm mt-4 border h-full flex justify-between">
-        <div  id='dash-res1' className='border-gray-100 rounded-xl shadow-lg my-4 justify-self-center border h-full'>
+        <div  id='dash-res1' className='border-gray-100 rounded-xl shadow-lg m-4 justify-self-center border h-full'>
         <div id='header-1' className='mt-2'>
                 <h1 id='account-header' className="text-start font-semibold font-sans text-teal-700 text-lg border-b-2 mt-2 w-fit border-teal-700">My Tasks</h1>
             </div>
@@ -47,7 +47,7 @@ const MyTask = () => {
             </div>
           ))}
             </div>
-            <div id='dash-res1' className=' my-4 justify-self-center border-gray-100 rounded-xl shadow-lg border h-fit'>
+            <div id='dash-res1' className=' m-4 justify-self-center border-gray-100 rounded-xl shadow-lg border h-fit'>
 
             <TaskDescription data={taskData.find(task => task.id === selectedTask)}/>
         </div>
