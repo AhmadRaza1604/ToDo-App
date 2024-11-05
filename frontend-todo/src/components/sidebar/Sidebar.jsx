@@ -7,7 +7,7 @@ import { BsExclamationLg } from 'react-icons/bs'; // Icon for Task Categories
 import { GoSignOut } from 'react-icons/go'; // Icon for Task Categories
 import { BiTask } from 'react-icons/bi'; // Icon for Settings
 import { MdDashboard } from 'react-icons/md';
-import Swal from 'sweetalert2'
+// import Swal from 'sweetalert2'
 import { UserContext } from '../../UserContext';  // Import UserContext
 
 const Sidebar = (isMob, setIsMob) => {
@@ -42,22 +42,22 @@ const Sidebar = (isMob, setIsMob) => {
           navigate('/login'); // Redirect to login if token is invalid
         }
       } else {
-        Swal.fire({
-          title: "Signed Out",
-          text:"You Have been Logged out! Sign in again.",
-          heightAuto:true,
-          allowOutsideClick:false,
-          padding: "0",
-          color: "white",
-          background: "rgb(20 184 166)",
-          confirmButtonText:'Login',
-          confirmButtonColor:"teal",
-          backdrop: `
-          rgba(128,128,128, 0.35)
-          `
-        }).then(()=>{
+        // Swal.fire({
+        //   title: "Signed Out",
+        //   text:"You Have been Logged out! Sign in again.",
+        //   heightAuto:true,
+        //   allowOutsideClick:false,
+        //   padding: "0",
+        //   color: "white",
+        //   background: "rgb(20 184 166)",
+        //   confirmButtonText:'Login',
+        //   confirmButtonColor:"teal",
+        //   backdrop: `
+        //   rgba(128,128,128, 0.35)
+        //   `
+        // }).then(()=>{
           navigate('/login'); // Redirect to login if no token is found
-        })
+        // })
   
       }
   }, [navigate, isLoggedIn,updateUser]);
