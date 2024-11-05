@@ -1,9 +1,9 @@
 import React,{useState} from 'react';
-import Person from '../../utils/images/Person.png';
-import Card from '../dashboard/Card';
-import TaskDescription from './TaskDescription';
+import Person from '../utils/images/Person.png';
+import Card from './dashboard/Card';
+import TaskDescription from './mytask/TaskDescription';
 
-const MyTask = () => {
+const SearchResults = () => {
     const taskData = [{
         id:1,
         title: 'My First Task',
@@ -39,7 +39,7 @@ const MyTask = () => {
         <div id='dash-res' className=" w-full border-gray-50 rounded-sm mt-4 border h-full flex justify-between">
         <div  id='dash-res1' className='w-3/6 border-gray-100 rounded-xl shadow-lg m-4 border h-full'>
         <div id='header-1' className='mt-2'>
-                <h1 id='account-header' className="text-start font-semibold font-sans text-teal-700 text-lg border-b-2 mt-2 w-fit border-teal-700">My Tasks</h1>
+                <h1 id='account-header' className="text-start font-semibold font-sans text-teal-700 text-lg border-b-2 mt-2 w-fit border-teal-700">Search Results</h1>
             </div>
           {taskData.map((data, index) => (
             <div onClick={()=>handleCardClick(data)}>
@@ -55,4 +55,4 @@ const MyTask = () => {
     );
 };
 
-export default MyTask;
+export default SearchResults;

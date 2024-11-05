@@ -14,3 +14,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-teal-500 rounded-lg;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-teal-600;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 11px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-teal-500 rounded-lg;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-teal-600;
+}
+

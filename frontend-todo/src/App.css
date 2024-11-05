@@ -1,0 +1,41 @@
+#dash-res{
+    display: flex;
+    justify-content: space-between;
+}
+#dash-res2{
+    display: flex;
+    justify-content:center;
+}
+#dash-res3{
+    display: flex;
+    justify-content:start;
+}
+#dash-res1{
+    width:50%
+}
+#card-top{
+    margin-left: 2.5rem;
+}
+
+@media (max-width: 1024px) {
+    #dash-res1{
+        width:90%;
+    }
+    #dash-res3{
+        
+        width:90%;
+        display: block;
+        justify-content:center;
+    }
+    #dash-res{
+        display: block;
+        justify-content: center;
+    }
+    #card-top{
+    margin-left: 1rem;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+
+
+}

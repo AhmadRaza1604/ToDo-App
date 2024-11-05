@@ -1,0 +1,98 @@
+#account-header{
+    margin-left: 1.5rem;
+}
+.form-inputs, .form-actions {
+    width: 60%;
+}
+.form-inputs-1 {
+    width: 65%;
+}
+.form-inputs-2 {
+    width: 38%;
+    padding-left: 1.25rem;
+}
+
+#row-add{
+    display: flex;
+    justify-content: space-between;
+}
+#file-upload{
+    position:absolute;
+}
+#account-info {
+    margin-left: 2rem;
+}
+#header-1{
+    display:flex;
+    justify-content: space-between;
+}
+@media (max-width: 768px) {
+    #account-header{
+        margin-left: 0.5rem;
+        text-align: center;
+        justify-self:center;
+    }
+    /* #header-1{
+        display:block;
+    } */
+    
+        /* #back-link{
+            display: none;
+        } */
+    .form-inputs, .form-actions {
+        width: 100%;
+    }
+    .form-inputs-1 {
+        width: 100%;
+    }
+    
+    .form-inputs-2 {
+        width: 100%;
+        padding-left: 0rem;
+    }
+    
+    #row-add{
+        display: block;
+    }
+    
+    #account-info {
+        margin-left: 0rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #account-userName, #account-email {
+        text-align: center;
+        justify-self: center;
+    }
+
+    #form-input {
+        width: 100%;
+    }
+    
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .form-inputs, .form-actions {
+        width: 80%;
+    }
+}
+
+#form-input{
+    padding: 8px 8px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    font-size: 14px;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.3s;
+}
+#update-btn, #password-btn {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#update-btn:hover, #password-btn:hover {
+    background-color: teal;
+    color: white;
+}

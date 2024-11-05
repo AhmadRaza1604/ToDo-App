@@ -1,0 +1,117 @@
+#verify-container {
+    background-image: linear-gradient(to right, teal,skyblue, teal);
+    min-height: 100vh;
+    max-height: 100vh;
+  }
+  
+  #first-box {
+    background-color: whitesmoke;
+    min-height: 85vh;
+    min-width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    max-height: 90vh;
+    padding: 20px;
+    border-radius: 10px;
+}
+#verify-box {
+    padding: 5px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+  }
+    
+  #verify-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: teal;
+    margin-bottom: 10px;
+  }
+  
+  #verify-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  #Verify-label {
+    font-size: 14px;
+    font-weight: 1000;
+    color: teal;
+    margin-bottom: 8px;
+    margin-left: 8px;
+  }
+
+#otp {
+    padding: 8px 15px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    font-size: 14px;
+    width: 10%;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  #otp:focus {
+    border: 2px solid teal;
+  }
+  
+  .otp-inputs {
+    display: flex;
+    justify-content:space-around;
+    gap: 0px !important;
+}
+
+.otp-input {
+    width: 40px;
+    padding: 10px 10px;
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#verify-links {
+    display: flex;
+    justify-content: center;
+  }
+  #verify-resend {
+    font-size: 14px;
+    color: teal;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+#verify-button {
+    background-image: linear-gradient(to right, skyblue, teal, skyblue);
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#verify-button:hover {
+    background-image: linear-gradient(180deg, teal, teal);
+}
+  
+  
+  @media (max-width: 1024px) {
+    #first-box {
+      flex-direction: column;
+    }
+    
+    #image-container {
+      display: none;
+    }
+  
+    #verify-box {
+      margin: 0 auto;
+    }
+  }
