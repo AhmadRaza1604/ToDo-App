@@ -96,12 +96,11 @@ const Signup = () => {
   return (
     <div id="signup-container" className="min-h-screen flex flex-col justify-center items-center">
       <div id="first-box" className="flex lg:flex-row flex-col-reverse">
-        {/* Left side - Image */}
+   
         <div id='image-container' className=" hidden lg:flex">
           <img src={SignupImage} alt="To-do App" id="todo-app-image" />
         </div>
 
-        {/* Right side - Signup form */}
         <div id="signup-box" className="lg:ml-10">
           <h1 id="signup-title">Sign Up</h1>
           <form id="signup-form" onSubmit={handleSubmit(onSubmit)}>

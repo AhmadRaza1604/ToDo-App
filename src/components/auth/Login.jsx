@@ -135,12 +135,11 @@ const Login = () => {
                             <br /><h3 className='text-gray-500'>or</h3>
                         </div>
 
-                        {/* Google sign-in button with SVG logo */}
                         <div>
                             <button
                                 id="g-login"
                                 type="button"
-                                className="text-gray-700 bg-white shadow-md w-full py-2 flex px-24 items-center justify-around border rounded-lg hover:bg-gray-100"
+                                className="text-gray-700 bg-white shadow-md w-full py-2 flex items-center justify-center border rounded-lg hover:bg-gray-100"
                                 onClick={logGoogleUser}
                             >
                                 <img src={GoogleLogo} alt="Google logo" id='g-img' className="w-5 h-5 mr-3" />
