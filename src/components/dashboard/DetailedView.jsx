@@ -1,11 +1,13 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Person from '../../utils/images/Person.png';
 import { MdDeleteForever, MdTaskAlt} from 'react-icons/md';
 import { LuClipboardEdit} from 'react-icons/lu';
 import { BsExclamation} from 'react-icons/bs';
+import EditTask from '../task/EditTask';
 
 const DetailedView = ({ data, onClose }) => {
     const currentTime = new Date(); // State for terms modal
+    const [showEditTask, setShowEditTask] = useState(false); // State for terms modal
 
     return (
         <div id='dash-res2' className='fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50'>
@@ -33,12 +35,19 @@ const DetailedView = ({ data, onClose }) => {
             </div>
             <p className='text-gray-500 text-center' >{data.description}</p>
             <div className='flex justify-end m-2 mt-6 text-2xl font-bold space-x-4 text-teal-500 '>
+                {data.status!=='Completed' && 
+                <>
                 <button className='hover:text-teal-700' title='Finish Task'><MdTaskAlt/></button>
-                <button className='hover:text-teal-700' title='Edit Task'><LuClipboardEdit/></button>
-                <button className='hover:text-teal-700' title='Delete Task'><MdDeleteForever/></button>
+                <button 
+                onClick={() => setShowEditTask(true)}
+                className='hover:text-teal-700' title='Edit Task'><LuClipboardEdit/></button>
                 <button className='hover:text-teal-700 font-extrabold text-3xl' title='Set as Vital'><BsExclamation/></button>
+                </>
+                }
+                <button className='hover:text-teal-700' title='Delete Task'><MdDeleteForever/></button>
             </div>
             </div>
+      {showEditTask && <EditTask onClose={() => setShowEditTask(false)} />}
         </div>
 
     );

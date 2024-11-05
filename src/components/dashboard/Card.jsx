@@ -21,7 +21,7 @@ const Card = ({taskData,index,hoverEffect,isSelected}) => {
     return (
         <div>
 
-          <div key={index} className={`${cardClasses} border m-2 p-2 border-gray shadow-sm ml-10 rounded-xl w-10/12`}>
+          <div key={index} className={`${cardClasses} border m-2 p-2 border-gray shadow-sm justify-self-center rounded-xl w-10/12`}>
             <FaDotCircle className={` ${taskData.status === 'Not Started' ? 'text-red-600' :taskData.status==='In Progress' ? 'text-blue-600': 'text-green-600'}`} />
             <div id='card-res' className='mx-5 -mt-2 flex justify-between'>
               <div className=''>
